@@ -4,6 +4,7 @@ class Mapnik < Formula
   head "https://github.com/mapnik/mapnik.git"
   url "https://s3.amazonaws.com/mapnik/dist/v3.0.1/mapnik-v3.0.1.tar.bz2"
   sha256 "539cb1831fc03b2d2b7b1f8487b02f2c23864f723aaea70719b12fb458fd87de"
+  revision 1
 
   bottle do
     cellar :any
