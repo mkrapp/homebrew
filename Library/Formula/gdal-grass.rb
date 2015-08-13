@@ -3,7 +3,6 @@ class GdalGrass < Formula
   homepage "http://www.gdal.org"
   url "http://download.osgeo.org/gdal/gdal-grass-1.4.3.tar.gz"
   sha256 "ea18d1e773e8875aaf3261a6ccd2a5fa22d998f064196399dfe73d991688f1dd"
-  revision 1
 
   depends_on "gdal"
   depends_on "grass"
