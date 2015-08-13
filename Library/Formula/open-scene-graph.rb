@@ -3,7 +3,7 @@ class OpenSceneGraph < Formula
   homepage "http://www.openscenegraph.org/projects/osg"
   url "http://trac.openscenegraph.org/downloads/developer_releases/OpenSceneGraph-3.3.3.zip"
   sha256 "b81cda123ffb3bd108e0fe4be4fff1351d6636e6fb0a1475b2c4fb9618d3ae2b"
-  revision 1
+  revision 2
 
   head "http://www.openscenegraph.org/svn/osg/OpenSceneGraph/trunk/"
 
