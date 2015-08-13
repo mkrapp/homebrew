@@ -3,6 +3,7 @@ class Orfeo < Formula
   homepage "http://www.orfeo-toolbox.org/otb/"
   url "https://downloads.sourceforge.net/project/orfeo-toolbox/OTB/OTB-3.20/OTB-3.20.0.tgz"
   sha256 "7c405756887842fbdfd6eb99a1fdc3c940817290a99c188414e5af45702d1b9d"
+  revision 1
 
   depends_on "cmake" => :build
   depends_on :python => :optional
