@@ -30,7 +30,9 @@ module Homebrew
     # this procedure will be removed in the future if it seems unnecessasry
     rename_taps_dir_if_necessary
 
-    Tap.select(&:git?).each do |tap|
+    Tap.each do |tap|
+      next unless tap.git?
+
       tap.path.cd do
         updater = Updater.new(tap.path)
 
@@ -122,9 +124,8 @@ module Homebrew
   def rename_taps_dir_if_necessary
     Dir.glob("#{HOMEBREW_LIBRARY}/Taps/*/") do |tapd|
       begin
-        tapd_basename = File.basename(tapd)
-
         if File.directory?(tapd + "/.git")
+          tapd_basename = File.basename(tapd)
           if tapd_basename.include?("-")
             # only replace the *last* dash: yes, tap filenames suck
             user, repo = tapd_basename.reverse.sub("-", "/").reverse.split("/")
