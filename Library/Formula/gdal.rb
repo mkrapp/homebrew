@@ -1,14 +1,8 @@
 class Gdal < Formula
   desc "GDAL: Geospatial Data Abstraction Library"
   homepage "http://www.gdal.org/"
-<<<<<<< HEAD
   url "http://download.osgeo.org/gdal/2.0.0/gdal-2.0.0.tar.gz"
   sha256 "53761563ff53c5bf27bff7c4d6cab8bb1634baccefda05348e0f3b7acaf4c9e6"
-=======
-  url "http://download.osgeo.org/gdal/1.11.2/gdal-1.11.2.tar.gz"
-  sha256 "66bc8192d24e314a66ed69285186d46e6999beb44fc97eeb9c76d82a117c0845"
-  revision 3
->>>>>>> f2a29d84aa60027ed8c3317aaacf5e5095b5c7f2
 
   bottle do
     sha256 "ee6dd88dbf4c617673407efd4ff29507fc772d9cf1f6f3f33871fff9c7615191" => :yosemite
