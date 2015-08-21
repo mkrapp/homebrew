@@ -1,14 +1,14 @@
 class Nanomsg < Formula
   desc "Socket library in C"
   homepage "http://nanomsg.org"
-  url "http://download.nanomsg.org/nanomsg-0.5-beta.tar.gz"
-  sha256 "13bff7ae8f31957722ee62d50504ce1a0c590da908f8566f997e3e521abb089f"
+  url "https://github.com/nanomsg/nanomsg/releases/download/0.6-beta/nanomsg-0.6-beta.tar.gz"
+  sha256 "69e2098446c9cd2c067b5ba38567c9ba30bf861a515b3d0a9302cb21c1167a69"
 
   bottle do
     cellar :any
-    sha1 "3a645be193f896f1a3b4f8593c1554656abdc4c1" => :yosemite
-    sha1 "874eb890390defb22b89cbf4303d218d384bd9b6" => :mavericks
-    sha1 "66775cd465f4351a92cb05824e279ed597b90270" => :mountain_lion
+    sha256 "3d0724e03b1bda43509ddd2697241aebdf67e084814141fe02ff964a2b51496b" => :yosemite
+    sha256 "c0f3ffe0375e039168efb280749671ee4c0cb228d5b1324d8f2a155f54f4a3fc" => :mavericks
+    sha256 "9668ea4539430d48e20eb61e363506d884ebf2a5a1413004c9ec01ed6e5d3e65" => :mountain_lion
   end
 
   head do
