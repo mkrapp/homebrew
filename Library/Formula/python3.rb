@@ -7,6 +7,7 @@ class Python3 < Formula
 
   bottle do
     revision 1
+    sha256 "58ae656ea0e46d63d7bd13bc4662032e0f27f614e003f3b06314f3688fcb0685" => :el_capitan
     sha256 "56a1b3a22e73fc804c26b2c6cab9f19a4f8db52958d8f74affd5e2d322b9ecb1" => :yosemite
     sha256 "913a4b5dda0a07107f7ad10a051615689d2f534abd92fb6d853dfe1339c0920b" => :mavericks
     sha256 "5d9fc73a5ed4754be0bcb0efd7f639dc95a9ea86bae87c86fb6358294c45c8db" => :mountain_lion
@@ -15,8 +16,8 @@ class Python3 < Formula
   head "https://hg.python.org/cpython", :using => :hg
 
   devel do
-    url "https://www.python.org/ftp/python/3.5.0/Python-3.5.0rc1.tgz"
-    sha256 "af300225b740401aaa3cb741568cd8a12fdb870b5f395ef8b1015dd45a6330bf"
+    url "https://www.python.org/ftp/python/3.5.0/Python-3.5.0rc4.tgz"
+    sha256 "d2576bcff852a8818842da2496782576413bd32ce3dd835192f86eeec4384379"
   end
 
   option :universal
