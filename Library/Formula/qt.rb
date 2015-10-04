@@ -1,6 +1,7 @@
 class Qt < Formula
   desc "Cross-platform application and UI framework"
   homepage "https://www.qt.io/"
+  revision 1
 
   stable do
     url "https://download.qt.io/official_releases/qt/4.8/4.8.7/qt-everywhere-opensource-src-4.8.7.tar.gz"
@@ -9,10 +10,9 @@ class Qt < Formula
   end
 
   bottle do
-    revision 1
-    sha256 "70379b1c0bbf570c97d20260352e8088aeddfb52132d8a57a5cb940a71614722" => :el_capitan
-    sha256 "698853771b7162e1d9ee5d5ec5c36007e781a0216f080a38554a456cf8dff96b" => :yosemite
-    sha256 "1c4e36d66889177779e013862c1e7fff484d7f1a0451d4d7746e5127fc144efc" => :mavericks
+    sha256 "48e2e4d7f4659409c74e6acb9b59fdf9ab5d8e4b7f9b438a73e3d0ca03635e93" => :el_capitan
+    sha256 "8e041b0a48c8a0785022c8a77e8c40efeb9d57cd701b635cc0a7ce46692c0c5f" => :yosemite
+    sha256 "fe687f9a9b657d33b7c11ad4ccd7208deddd8e96d2104df2df98de13b0c5d5d7" => :mavericks
   end
 
   # Backport of Qt5 commit to fix the fatal build error on OS X El Capitan.
@@ -123,8 +123,9 @@ class Qt < Formula
   end
 
   test do
+    Encoding.default_external = "UTF-8" unless RUBY_VERSION.start_with? "1."
     resource("test-project").stage testpath
-    system "qmake"
+    system bin/"qmake"
     system "make"
     assert_match /GitHub/, pipe_output(testpath/"qtnetwork-test 2>&1", nil, 0)
   end
