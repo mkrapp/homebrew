@@ -4,14 +4,14 @@
 class YoutubeDl < Formula
   desc "Download YouTube videos from the command-line"
   homepage "https://rg3.github.io/youtube-dl/"
-  url "https://yt-dl.org/downloads/2015.11.10/youtube-dl-2015.11.10.tar.gz"
-  sha256 "c5a34ecbcf27ff34e1aae7c17732095309012e33ea9d1d4def613ca73f47e6be"
+  url "https://yt-dl.org/downloads/2015.11.21/youtube-dl-2015.11.21.tar.gz"
+  sha256 "26ef30392579289ff54c54c6747fd0036a5fdf7429c55106f9703b0f9f19e339"
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "645bbfa8994e82d6db721129b0b36c0a6b4f6feb7e7ef29fffcc281c73939102" => :el_capitan
-    sha256 "421bdf1c25870fabfe4b318d91a7b5f91f1d898a124ce5fc9b6bfb8f20f15990" => :yosemite
-    sha256 "5cbec1e0400069b1ebb1636a82fd4e2a5d6ae2882d61871ad6da6ebfb858fe9d" => :mavericks
+    sha256 "2216a578a7b604e7f0487a433a813f32b474c8ddb8a2bef1cbe67d11669c80e8" => :el_capitan
+    sha256 "93394c9951ac1bb173e1fece2790c00173ddff380b8da56d5bd01d97cfad60de" => :yosemite
+    sha256 "f1a87c27dd78053100569282f03ea3db29467614d116d80e157e5471451850fc" => :mavericks
   end
 
   head do
@@ -36,5 +36,6 @@ class YoutubeDl < Formula
 
   test do
     system "#{bin}/youtube-dl", "--simulate", "https://www.youtube.com/watch?v=he2a4xK8ctk"
+    system "#{bin}/youtube-dl", "--simulate", "--yes-playlist", "https://www.youtube.com/watch?v=AEhULv4ruL4&list=PLZdCLR02grLrl5ie970A24kvti21hGiOf"
   end
 end
